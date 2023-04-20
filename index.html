@@ -35,7 +35,8 @@
 <body style='margin : 0px; overflow: hidden;'>
 
     <a-scene embedded arjs="debugUIEnabled: false;" vr-mode-ui="enabled: false">   
-    <a-marker type='pattern' url='pump station_01.patt'>
+    #進流抽水站
+      <a-marker type='pattern' url='pump station_01.patt'>
     <video id="mivideo" crossOrigin="anonymous" playsinline webkitplaysinline autoplay controls muted src="pump station_01.mp4"></video>
     <a-video src="#mivideo" position="0 0 0" scale="3 2 2" rotation="270 0 0" ></a-video>
    
@@ -73,7 +74,49 @@ document.getElementById("btn4").addEventListener("click", (e)=>{
 
 
      </script>
+   #    pH調整池
       </a-marker>
+    <a-marker type='pattern' url='pH adjustment tank_01.patt'>
+    <video id="mivideo" crossOrigin="anonymous" playsinline webkitplaysinline autoplay controls muted src="pH adjustment tank_01.mp4"></video>
+    <a-video src="#mivideo" position="0 0 0" scale="3 2 2" rotation="270 0 0" ></a-video>
+   
+   <script> 
+      var m = document.querySelector("a-marker")
+      m.addEventListener("markerFound", (e)=>{
+      console.log("found")
+      var v = document.querySelector('#mivideo').play();
+   
+
+})
+      m.addEventListener("markerLost", (e)=>{
+      console.log("lost")
+      var v = document.querySelector('#mivideo').pause();
+  
+})
+
+
+document.getElementById("btn1").addEventListener("click", (e)=>{
+
+  var v = document.querySelector('#mivideo').muted=false;
+})
+document.getElementById("btn2").addEventListener("click", (e)=>{
+
+  var v = document.querySelector('#mivideo').muted=true;
+})
+document.getElementById("btn3").addEventListener("click", (e)=>{
+
+  var v = document.querySelector('#mivideo').pause();
+})
+document.getElementById("btn4").addEventListener("click", (e)=>{
+
+  var v = document.querySelector('#mivideo').play();
+})
+
+
+     </script>
+      </a-marker>     
+      
+      
       <a-entity camera></a-entity>
     </a-scene>
 </body>
