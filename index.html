@@ -33,12 +33,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <body style='margin : 0px; overflow: hidden;'>
-<video id="mivideo1" crossOrigin="anonymous" playsinline webkitplaysinline autoplay controls muted src="pump station_01.mp4"></video>
-<video id="mivideo2" crossOrigin="anonymous" playsinline webkitplaysinline autoplay controls muted src="pH adjustment tank_01.mp4"></video>     
+
+     
   <a-scene embedded arjs="debugUIEnabled: false;" vr-mode-ui="enabled: false">   
   
       
       <a-marker type='pattern' url='pump station_01.patt'>
+        <video id="mivideo1" crossOrigin="anonymous" playsinline webkitplaysinline autoplay controls muted src="pump station_01.mp4"></video>
         <a-video src="#mivideo1" position="0 0 0" scale="3 2 2" rotation="270 0 0" ></a-video>
    
    <script> 
@@ -78,7 +79,8 @@ document.getElementById("btn4").addEventListener("click", (e)=>{
    #    pH調整池
       </a-marker>
     <a-marker type='pattern' url='pH adjustment tank_01.patt'>
-     <a-video src="#mivideo2" position="0 0 0" scale="3 2 2" rotation="270 0 0" ></a-video>
+     <video id="mivideo2" crossOrigin="anonymous" playsinline webkitplaysinline autoplay controls muted src="pH adjustment tank_01.mp4"></video>
+      <a<video id="mivideo2" crossOrigin="anonymous" playsinline webkitplaysinline autoplay controls muted src="pH adjustment tank_01.mp4"></video>-video src="#mivideo2" position="0 0 0" scale="3 2 2" rotation="270 0 0" ></a-video>
    
    <script> 
       var m = document.querySelector("a-marker")
